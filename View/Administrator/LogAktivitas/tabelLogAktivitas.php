@@ -1,8 +1,8 @@
 <?php
 @session_start();
-    include"../../../Config/configdb.php";
+    include"../../../Config/ConfigDB.php";
     include"../../../Config/Functions.php";
-    include"../../../Controller/session.php";
+    include"../../../Controller/Session.php";
     include"../../../Controller/Administrator/LogAktivitas/tabelLogAktivitasQuery.php";
 ?>
 <table class="table table-bordered table-striped table-hover datatable">
