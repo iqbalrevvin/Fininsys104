@@ -12,8 +12,8 @@ $(document).ready(function() {
             closeOnCancel: false
         }, function(isConfirm) {
             if (isConfirm) {
-                $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
-                $("#deleteLoad").show().html("<img src='Assets/Images/load2.gif' width='40' height='40'>");
+                $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
+                $("#deleteLoad").show().html("<img src='Assets/images/load2.gif' width='40' height='40'>");
                 $.ajax({
                     type: "POST",
                     url: "Controller/Bendahara/Backup/backupDatabase.php",
@@ -42,7 +42,7 @@ $(document).ready(function() {
 
     //DOWNLOADDATABASE FININSYS
     $(document).on('click', '#btnDownloadBackup', function() {
-        $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
+        $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
         $.ajax({
             type: "POST",
             url: "Controller/Bendahara/Backup/downloadBackup.php",
@@ -73,7 +73,7 @@ $(document).ready(function() {
                 closeOnCancel: false
             }, function(isConfirm) {
                 if (isConfirm) {
-                    $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
+                    $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
                     $.ajax({
                         type: "POST",
                         url: "Controller/Bendahara/Backup/importProses.php",
