@@ -15,7 +15,7 @@
                             <select name="jnsTransaksi" class="form-control show-tick" data-live-search="true" required>
                                 <option value="">-- Jenis Transaksi --</option>
                                     <?php 
-                                    include "Controller/Other/pilihJenisTransaksi.php";
+                                    include "Controller/Other/PilihJenisTransaksi.php";
                                     while($JnsTrans = mysqli_fetch_array($jenis_transaksi_qr)){
                                         echo "  <option value='$JnsTrans[idJenis_transaksi]' 
                                                 data-subtext='$JnsTrans[nama_jurusan] Angkatan $JnsTrans[tahun_angkatan]'>
