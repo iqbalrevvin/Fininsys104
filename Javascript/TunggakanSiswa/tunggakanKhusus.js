@@ -2,7 +2,7 @@ $(document).ready(function(){
 //-----------PILIH TUNGGAKAN REGULER BERDASARKAN ANGKATAN-----------------------------------------------
 //$("#pilihKelas").change(function(){
     $(document).on('change', '#pilihKelas', function (e) {
-    $("#loadSelect").show().html("<img src='Assets/Images/loading.gif' width='150' height='35' >");
+    $("#loadSelect").show().html("<img src='Assets/images/loading.gif' width='150' height='35' >");
     //var pilihAngkatan = $("#pilihAngkatan").val();
     $pilihAngkatan          = $('#pilihAngkatan').val();
     $pilihKelas             = $('#pilihKelas').val();
@@ -26,7 +26,7 @@ $(document).ready(function(){
 $("#pilihAngkatan").change(function(){
     $("#ketSelect").hide();
     $("#pilihTunggakanKhusus").hide();
-    $("#loadSelect").show().html("<img src='Assets/Images/loading.gif' width='150' height='35' >");
+    $("#loadSelect").show().html("<img src='Assets/images/loading.gif' width='150' height='35' >");
   });
 
 });
