@@ -1,6 +1,6 @@
 <?php 
 $ID = @$_GET['ID'];
-require_once "Config/configdb.php";
+require_once "Config/ConfigDB.php";
 if(@$_GET['k']==''){
 	include "daftarProvinsi.php";
 }else{
