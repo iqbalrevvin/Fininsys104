@@ -2,7 +2,7 @@
 @session_start();
 include "../../../../../Config/ConfigDB.php";
 include "../../../../../Config/Functions.php";
-include "../../../../session.php";
+include "../../../../Session.php";
     
     if(isset($_POST['editKelolaKas'])){
         date_default_timezone_set('Asia/Jakarta');
