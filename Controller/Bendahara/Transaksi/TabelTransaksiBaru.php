@@ -1,5 +1,5 @@
 <?php
-include "../../../COnfig/COnfigDB.php";
+include "../../../Config/ConfigDB.php";
 date_default_timezone_set('Asia/Jakarta');
 $today = date("Y-m-d"); 
 $qr_trans_baru = mysqli_query($db, "SELECT * FROM siswa JOIN transaksi ON siswa.no_idnt = transaksi.no_idnt
