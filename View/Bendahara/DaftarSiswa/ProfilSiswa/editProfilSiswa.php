@@ -309,7 +309,7 @@
                         <option value="<?php echo $profil['provinsi'] ?>"><?php echo $profil['provinsi'] ?></option>
                         <option value="">--Pilih Provinsi--</option>
                             <?php
-                                include "COntroller/Other/pilihAlamatProvinsi.php"; 
+                                include "Controller/Other/pilihAlamatProvinsi.php"; 
                                 while($prov = $dataProvinsi->fetch_object()): 
                             ?>
                                 <option value="<?= $prov->nama_provinsi ?>"><?= $prov->nama_provinsi ?></option>
