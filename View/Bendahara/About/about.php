@@ -12,7 +12,7 @@
                             <div class="media">
                                 <div class="media-left">
                                     <a href="javascript:void(0);">
-                                        <img class="media-object" src="Assets/images/Admin/iqbal.jpeg" width="84" height="94">
+                                        <img class="media-object" src="Assets/images/admin/iqbal.jpeg" width="84" height="94">
                                     </a>
                                 </div>
                                 <div class="media-body">
