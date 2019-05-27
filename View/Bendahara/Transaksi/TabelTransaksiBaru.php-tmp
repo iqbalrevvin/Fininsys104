@@ -1,0 +1,109 @@
+<!-- Basic Examples -->
+<div class="row clearfix">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+            <!--<div class="header">
+                <h2>
+                    Daftar Transaksi Terbaru
+                </h2>
+                <ul class="header-dropdown m-r--5">
+            </div>-->
+            <div class="body">
+                <div class="table-responsive">
+                <table class="table table-bordered table-striped table-hover datatable">
+                        <thead class="font-11">
+                            <tr>
+                                <th>#</th>
+                                <th>Nama</th>
+                                <th>NIPD</th>
+                                <th>Kelas</th>
+                                <th>Master</th>
+                                <th>Jenis</th>
+                                <th>No Trnsksi</th>
+                                <th>Jumlah</th>
+                                <th style="text-align: center; vertical-align: middle;">Act</th>
+                            </tr>
+                        </thead>
+                        <tfoot class="font-11">
+                            <tr>
+                                <th>#</th>
+                                <th>Nama</th>
+                                <th>NIPD</th>
+                                <th>Kelas</th>
+                                <th>Master</th>
+                                <th>Jenis</th>
+                                <th>No Trnsksi</th>
+                                <th>Jumlah</th>
+                                <th style="text-align: center; vertical-align: middle;">Act</th>
+                            </tr>
+                        </tfoot>
+                        <tbody class="font-11">
+<?php
+include "../../../Controller/Bendahara/Transaksi/TabelTransaksiBaru.php";
+$no = 1;
+while ($transaksi = mysqli_fetch_array($qr_trans_baru)) {
+	$scure   = md5(md5($transaksi['idSiswa']).md5('qwerty12345'));
+	$jmlSmst = $transaksi['jumlah_semester'];
+	?>
+
+	                            <tr>
+	                                <td><?=$no++;?></td>
+	                                <td><b><a class="font-bold col-teal font-12" href="?p=StudentList&k=Profile&ID=<?php echo $transaksi['idSiswa']?>&Scure=<?php echo $scure?>">
+	<?=substr($transaksi['nama_siswa'], 0, 20)?>
+	                                        </a>
+	                                    </b>
+	                                </td>
+	                                <td><?=$transaksi['nipd']?></td>
+	                                <td><?=$transaksi['kelas']?></td>
+	                                <td><b class="col-black font-10"><?=$transaksi['nama_master_transaksi']?></td>
+	                                <td><b class="col-black font-10"><?=$transaksi['nama_jenis_transaksi']?></td>
+	                                <td>
+	                                    <button id="isi" class="btn bg-white btn-xs waves-effect" value="<?=$transaksi['idTransaksi']?>"
+	                                            data-toggle="modal" data-target="#Trans<?=$transaksi['idTransaksi']?>">
+	                                            <span class="font-bold col-teal"> <?=$transaksi['no_transaksi']?></span>
+	                                    </button>
+	                                </td>
+	                                <td><?="<b>Rp.".number_format($transaksi['jumlah_bayar']).",-</b>"?></td>
+	                                <td>
+	                                    <button type="button" class="btn bg-teal btn-xs waves-effect"
+	                                            data-toggle="modal" data-target="#editTrans<?php echo $transaksi['idTransaksi']?>">
+	                                        <i class="material-icons">mode_edit</i>
+	                                    </button>
+	                                    <button type="button" class="btn bg-pink btn-xs waves-effect delete"
+	                                            data-toggle="modal" data-transaksi="<?php echo $transaksi['no_transaksi']?>" data-id="<?php echo $transaksi['no_transaksi']?>" value="<?php echo $transaksi['no_transaksi']?>">
+	                                            <i class="material-icons">remove_circle</i>
+	                                    </button>
+	                                    <div class="row clearfix js-sweetalert">
+	                                    <div class="modal fade " id="Trans<?php echo $transaksi['idTransaksi']?>"
+	                                         tabindex="-1" role="dialog">
+	                                        <div class="modal-dialog modal-lg" role="document">
+	                                            <div class="modal-content">
+	                                        <div class="modal-header">
+	                                            <h4 class="modal-title" id="defaultModalLabel">
+	                                                <span  id="loading2"></span>Cetak Transaksi
+	                                            </h4>
+	                                        </div>
+	                                    <div class="modal-body">
+
+	<?php require_once "../../../Config/Functions.php";?>
+	                                        <?php include "../Invoice/Invoice.php";?>
+	</div>
+	                                </td>
+	                            </tr>
+	<?php include "modal_editTransaksi.php";?>
+	                            <?php }?>
+</tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+

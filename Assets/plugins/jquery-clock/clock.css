@@ -1,0 +1,16 @@
+
+
+
+
+
+
+
+.clock {width:1300px; height: 0px; margin:0px; padding:0px; color:#fff; text-align:left; }
+
+#Date { font-family:'BebasNeueRegular', Arial, Helvetica, sans-serif; font-size:10px; text-align:left; text-shadow:0 0 5px #00c6ff; }
+
+.clockstyle ul { font-family:'BebasNeueRegular', Arial, Helvetica, sans-serif; font-size:10px; text-align:left; text-shadow:0 0 5px #00c6ff; }
+.clockstyle ul li { display:inline; font-size:1em; text-align:left; font-family:'BebasNeueRegular', Arial, Helvetica, sans-serif; text-shadow:0 0 5px #00c6ff; }
+
+#point { position:relative; -moz-animation:mymove 1s ease infinite; -webkit-animation:mymove 1s ease infinite; padding-left:2px; padding-right:2px; }
+

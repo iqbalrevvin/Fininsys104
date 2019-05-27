@@ -1,0 +1,84 @@
+<?php 
+	include "../../../Config/ConfigDB.php";
+	include "../../../Config/Functions.php";
+
+// storing  request (ie, get/post) global array to a variable  
+$requestData= $_REQUEST;
+
+$columns = array( 
+// datatable column index  => database column name
+	0 => 'idSiswa',
+	1 => 'nama_siswa',
+	2 => 'no_idnt',
+    3 => 'nipd', 
+	4 => 'tgl_masuk',
+	5 => 'tgl_masuk',
+	6 => 'kelas',
+	7 => 'tgl_lahir',
+);
+
+// getting total number records without any search
+$sql = "SELECT * FROM siswa JOIN kelas ON siswa.kelas = kelas.nama_kelas 
+		JOIN prodi ON kelas.idJurusan = prodi.idJurusan 
+		ORDER BY idSiswa DESC";
+$query=mysqli_query($db, $sql) or die($db->error);
+$totalData = mysqli_num_rows($query);
+$totalFiltered = $totalData;  // when there is no search parameter then total number rows = total number filtered rows.
+
+$sql = "SELECT * FROM siswa JOIN kelas ON siswa.kelas = kelas.nama_kelas 
+		JOIN prodi ON kelas.idJurusan = prodi.idJurusan WHERE 1=1";
+if( !empty($requestData['search']['value']) ) {
+	// if there is a search parameter
+	$sql.=" AND ( nama_siswa LIKE '".$requestData['search']['value']."%' ";    // $requestData['search']['value'] contains search parameter
+	$sql.=" OR nipd LIKE '".$requestData['search']['value']."%' ";
+	$sql.=" OR kelas LIKE '".$requestData['search']['value']."%' ";
+	$sql.=" OR tgl_lahir LIKE '".$requestData['search']['value']."%' )";
+	$query=mysqli_query($db, $sql) or die($db->error);
+	$totalFiltered = mysqli_num_rows($query); // when there is a search parameter then we have to modify total number filtered rows as per search result without limit in the query 
+
+	$sql.=" ORDER BY ". $columns[$requestData['order'][0]['column']]."  ".$requestData['order'][0]['dir']." LIMIT ".$requestData['start']." ,".$requestData['length']."   "; // $requestData['order'][0]['column'] contains colmun index, $requestData['order'][0]['dir'] contains order such as asc/desc , $requestData['start'] contains start row number ,$requestData['length'] contains limit length.
+	$query=mysqli_query($db, $sql) or die("loadListTransaction.php: get PO"); // again run query with limit
+
+	}else{	
+
+	$sql = "SELECT * FROM siswa JOIN kelas ON siswa.kelas = kelas.nama_kelas 
+		JOIN prodi ON kelas.idJurusan = prodi.idJurusan";
+	$sql.=" ORDER BY ". $columns[$requestData['order'][0]['column']]."  ".$requestData['order'][0]['dir']."  LIMIT ".$requestData['start']." ,".$requestData['length']." ";
+	$query=mysqli_query($db, $sql) or die($db->error);
+	
+}
+
+$data = array();
+$no = 1;
+$i=1+$requestData['start'];
+while( $row=mysqli_fetch_array($query) ) {  // preparing an array
+	$semester = semester($row["tgl_masuk"], $row['jumlah_semester']);
+	$grade = grade($row["tgl_masuk"], $row['jumlah_semester']);
+
+	$nestedData=array(); 
+	$nestedData[] = "<button type='button' id='btnPilihSiswa' class='btn btn-xs bg-teal waves-effect'  
+                      data-idsiswa='".$row['no_idnt']."' data-namasiswa='".$row['nama_siswa']."'>  
+                      <i class='material-icons'>check_circle</i>
+                      <span class='font-bold col-white'>Pilih</span>
+                      </button>";
+	$nestedData[] = "<b class='col-black'>".$row['nama_siswa']."</b>";
+	$nestedData[] = $row["nisn"];
+	$nestedData[] = $row["nipd"];
+	$nestedData[] = $grade;
+    $nestedData[] = $row["kelas"];
+	$nestedData[] = "<b>".$row["nama_jurusan"]."</b>";
+
+	$data[] = $nestedData;
+    $i++;
+}
+
+$json_data = array(
+			"draw"            => intval( $requestData['draw'] ),   // for every request/draw by clientside , they send a number as a parameter, when they recieve a response/data they first check the draw number, so we are sending same number in draw. 
+			"recordsTotal"    => intval( $totalData ),  // total number of records
+			"recordsFiltered" => intval( $totalFiltered ), // total number of records after searching, if there is no searching then totalFiltered = totalData
+			"data"            => $data   // total data array
+			);
+
+echo json_encode($json_data);  // send data as json format
+
+?>
