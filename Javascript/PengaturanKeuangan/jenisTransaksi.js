@@ -23,12 +23,12 @@
     }
 // Menampilkan Tabel Jenis Transaksi----------------------------------------------------------------
 $(document).on('click', '#btnTampilJenisTransaksi', function(){
-    $("#loadingJenisTransaksi").show().html("<img src='Assets/Images/loading.gif' width='50' height='25' >");
+    $("#loadingJenisTransaksi").show().html("<img src='Assets/images/loading.gif' width='50' height='25' >");
 });
 
 //Insert Jenis Transaksi Baru
        $(document).on('click', '#bntAddJnsTransaksi', function(){
-            $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
+            $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
             if($('#idMasterTrans').val()=="" || $('#kdTransaksi').val()=="" || $('#namaTransaksi').val()=="" 
                 || $('#semesterTransaksi').val()=="" || $('#kewajiban').val()=="" 
                 || $('#keteranganTransaksi').val()=="" || $('#tipeJenisTransaksi').val()==""){
@@ -84,8 +84,8 @@ $(document).on('click', '#btnTampilJenisTransaksi', function(){
         closeOnCancel: false
         },      function (isConfirm) {
                     if (isConfirm) {
-                        $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
-                        $("#deleteLoad").show().html("<img src='Assets/Images/load2.gif' width='40' height='40'>");
+                        $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
+                        $("#deleteLoad").show().html("<img src='Assets/images/load2.gif' width='40' height='40'>");
                         $.ajax({
                             type: "POST",
                             url: "Controller/Bendahara/PengaturanKeuangan/DaftarJenisTransaksi/deleteJnsTransaksiQuery.php",
@@ -112,7 +112,7 @@ $(document).on('click', '#btnTampilJenisTransaksi', function(){
 
         // Edit Jenis Transaksi Terbaru
        $(document).on('click', '.editJenisTransaksi', function(){
-            $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
+            $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
             $id=$(this).val();
             if ($('#kdTransaksi'+$id).val()=="" || $('#idMasterTrans'+$id).val()=="" || $('#namaTransaksi'+$id).val()=="" 
                 || $('#semesterTransaksi'+$id).val()=="" || $('#kewajiban'+$id).val()==""
@@ -157,7 +157,7 @@ $(document).on('click', '#btnTampilJenisTransaksi', function(){
 
        // SIMPAN BARU Jenis Transaksi Terbaru
        $(document).on('click', '.simpanJenisTransaksi', function(){
-            $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
+            $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
             $id=$(this).val();
             if ($('#kdTransaksi'+$id).val()=="" || $('#idMasterTrans'+$id).val()=="" || $('#namaTransaksi'+$id).val()=="" 
                 || $('#semesterTransaksi'+$id).val()=="" || $('#kewajiban'+$id).val()==""

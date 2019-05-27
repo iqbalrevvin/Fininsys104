@@ -19,7 +19,7 @@ $(document).ready(function() {
 //--FUNGSI MASTER TRANSAKSI-----------------------------------------------------------------------------------
 //Insert Master Transaksi Baru
        $(document).on('click', '#bntAddMasterTransaksi', function(){
-            $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
+            $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
             if($('#namaMasterTransaksi').val()=="" || $('#programStudi').val()=="" || $('#thnAngkatan').val()==""){
                 value_null()
                 $("#loading").hide();
@@ -33,7 +33,7 @@ $(document).ready(function() {
 
                 $.ajax({
                     type: "POST",
-                    url: "COntroller/Bendahara/PengaturanKeuangan/DaftarMasterTransaksi/addMasterTransaksiQuery.php",
+                    url: "Controller/Bendahara/PengaturanKeuangan/DaftarMasterTransaksi/addMasterTransaksiQuery.php",
                     data: {
                         namaMasterTransaksi     :$namaMasterTransaksi,
                         programStudi            :$programStudi,
@@ -52,8 +52,8 @@ $(document).ready(function() {
 
        // Edit Master Transaksi Terbaru
        $(document).on('click', '.editMasterTransaksi', function(){
-            $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
-            $("#loading2").show().html("<img src='Assets/Images/load2.gif' width='40' height='40'>");
+            $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
+            $("#loading2").show().html("<img src='Assets/images/load2.gif' width='40' height='40'>");
             $id=$(this).val();
             if ($('#namaMasterTransaksi'+$id).val()=="" || $('#programStudi'+$id).val()=="" || $('#thnAngkatan'+$id).val()==""){
                 value_null()
@@ -105,8 +105,8 @@ $(document).ready(function() {
         closeOnCancel: false
         },      function (isConfirm) {
                     if (isConfirm) {
-                        $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
-                        $("#deleteLoad").show().html("<img src='Assets/Images/load2.gif' width='40' height='40'>");
+                        $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
+                        $("#deleteLoad").show().html("<img src='Assets/images/load2.gif' width='40' height='40'>");
                         $.ajax({
                             type: "POST",
                             url: "Controller/Bendahara/PengaturanKeuangan/DaftarMasterTransaksi/deleteMasterTransaksiQuery.php",

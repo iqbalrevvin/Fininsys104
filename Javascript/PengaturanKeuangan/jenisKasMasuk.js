@@ -20,7 +20,7 @@ function JnsKasMsk(){
 
 //Insert Jenis Kas Masuk
        $(document).on('click', '#btnAddJnsKasMsk', function(){
-            $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
+            $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
             if($('#namaJnsKasMsk').val()==""){
                 value_null()
                 $("#loading").hide();
@@ -47,7 +47,7 @@ function JnsKasMsk(){
 
         // Edit Jenis Kas Masuk
        $(document).on('click', '.btnEditJnsKasMsk', function(){
-            $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
+            $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
             $id=$(this).val();
             if ($('#namaJnsKasMsk'+$id).val()==""){
                 value_null()
@@ -93,7 +93,7 @@ function JnsKasMsk(){
         closeOnCancel: false
         },      function (isConfirm) {
                     if (isConfirm) {
-                        $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
+                        $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
                         $("#deleteLoad").show().html("<img src='Assets/Images/load2.gif' width='40' height='40'>");
                         $.ajax({
                             type: "POST",

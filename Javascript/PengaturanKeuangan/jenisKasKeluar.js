@@ -19,7 +19,7 @@ function JnsKasKlr(){
 //JENIS KAS MASUK--------------------------------------------------------------
 //Insert Jenis Kas Keluar
        $(document).on('click', '#btnAddJnsKasKlr', function(){
-            $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
+            $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
             if($('#namaJnsKasKlr').val()==""){
                 value_null()
                 $("#loading").hide();
@@ -47,7 +47,7 @@ function JnsKasKlr(){
 
         // Edit Jenis Kas Keluar
        $(document).on('click', '.btnEditJnsKasKlr', function(){
-            $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
+            $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
             $id=$(this).val();
             if ($('#namaJnsKasKlr'+$id).val()==""){
                 value_null()
@@ -93,8 +93,8 @@ function JnsKasKlr(){
         closeOnCancel: false
         },      function (isConfirm) {
                     if (isConfirm) {
-                        $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
-                        $("#deleteLoad").show().html("<img src='Assets/Images/load2.gif' width='40' height='40'>");
+                        $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
+                        $("#deleteLoad").show().html("<img src='Assets/images/load2.gif' width='40' height='40'>");
                         $.ajax({
                             type: "POST",
                             url: "Controller/Bendahara/PengaturanKeuangan/JenisKasKeluar/deleteJenisKasKlr.php",
