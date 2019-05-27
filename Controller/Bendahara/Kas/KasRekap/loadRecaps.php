@@ -1,5 +1,5 @@
 <?php 
-	include "../../../../Config/configdb.php";
+	include "../../../../Config/ConfigDB.php";
 	include "../../../../Config/Functions.php";
 
 // storing  request (ie, get/post) global array to a variable  
