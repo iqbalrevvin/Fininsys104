@@ -1,5 +1,5 @@
 <?php 
-    include "../../../../Config/configdb.php";
+    include "../../../../Config/ConfigDB.php";
     include "../../../../Controller/Bendahara/Kas/KasKhusus/masterKasKhususQuery.php"; 
 ?>
         <div class="card">

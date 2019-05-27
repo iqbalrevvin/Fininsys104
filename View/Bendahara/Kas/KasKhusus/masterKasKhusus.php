@@ -1,6 +1,6 @@
 <?php 
 $ID = @$_GET['ID'];
-include "Config/configdb.php";
+include "Config/ConfigDB.php";
 include "Controller/Bendahara/Kas/KasKhusus/masterKasKhususQuery.php";
 #include "admin/query/KasKhusus/Kelola/tabelKelolaKasKhususQr.php";
 include "Controller/Bendahara/PengaturanData/DataSekolah/profilSekolahQuery.php";
@@ -16,7 +16,7 @@ elseif(@$_GET['k']=='Manage'){
     $check=md5(md5($ID).md5('qwerty12345'));
     if($scure==$check){     
 		$masterKasKhususQr = $db->query("SELECT * FROM master_kas_khusus WHERE idMaster_kas = '$ID' ORDER BY idMaster_kas");
-	 	include "Config/configdb.php";
+	 	include "Config/ConfigDB.php";
     	include "Controller/Bendahara/Kas/KasKhusus/Kelola/tabelKelolaKasKhususQr.php";
     	include "Controller/Bendahara/Kas/KasKhusus/Kelola/statusKasKelolaQr.php";  
 		include"Kelola/daftarKelolaKasKhusus.php";
