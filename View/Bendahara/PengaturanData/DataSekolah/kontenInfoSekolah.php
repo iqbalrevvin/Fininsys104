@@ -2,11 +2,11 @@
             <div class="body">
                 <?php if($sekolah['foto_sekolah']==''){ ?>
                     <img style="width:250px; height:250px;" class="profile-user-img img-responsive img-thumbnail" 
-                                src="assets/images/sekolah/sekolah-default.png" 
+                                src="Assets/images/sekolah/sekolah-default.png" 
                                 align="center" width="500" height="100" alt="School picture">
                 <?php }else{ ?>
                 <img style="text-align: center" class="profile-user-img img-responsive img-thumbnail" 
-                     src="assets/images/sekolah/<?php echo $sekolah['foto_sekolah'] ?>" 
+                     src="Assets/images/sekolah/<?php echo $sekolah['foto_sekolah'] ?>" 
                       width="300" height="300" alt="User profile picture">
                 <?php } ?>
                 <h4 style="text-align: center" class="profile-username text-center"><?php echo $sekolah['nama_sekolah'] ?></h4>
@@ -56,13 +56,13 @@
                         <strong><i class="fa fa-book margin-r-5"></i> Logo Sekolah</strong>
                         <p class="text-muted font-12">
                             <img style="text-align: center" class="profile-user-img img-responsive img-thumbnail" 
-                                 src="assets/images/sekolah/<?php echo $sekolah['logo_sekolah'] ?>" 
+                                 src="Assets/images/sekolah/<?php echo $sekolah['logo_sekolah'] ?>" 
                                  width="300" height="300" alt="User profile picture">
                         </p>
                         <strong><i class="fa fa-book margin-r-5"></i> Logo Dinas</strong>
                         <p class="text-muted font-12">
                             <img style="text-align: center" class="profile-user-img img-responsive img-thumbnail" 
-                                 src="assets/images/sekolah/<?php echo $sekolah['logo_dinas'] ?>" 
+                                 src="Assets/images/sekolah/<?php echo $sekolah['logo_dinas'] ?>" 
                                  width="300" height="300" alt="User profile picture">
                         </p>
                         

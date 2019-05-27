@@ -14,7 +14,7 @@
         <!--//-->
         <?php
             if (isset($_POST['submitFotoSekolah'])){ 
-            $targetDir          = "assets/images/sekolah/";
+            $targetDir          = "Assets/images/sekolah/";
             $nama_file_foto     = $_FILES['editFotoSekolah']['name'];
             $file_foto          = $_FILES['editFotoSekolah']['tmp_name'];
             $acak               = rand(1,99);
@@ -49,7 +49,7 @@
         <!--//-->
         <?php
             if (isset($_POST['submitLogoSekolah'])){ 
-            $targetDir          = "assets/images/sekolah/";
+            $targetDir          = "Assets/images/sekolah/";
             $nama_file_foto     = $_FILES['editLogoSekolah']['name'];
             $file_foto          = $_FILES['editLogoSekolah']['tmp_name'];
             $acak               = rand(1,99);
@@ -84,7 +84,7 @@
         <!--//-->
         <?php
             if (isset($_POST['submitLogoDinas'])){ 
-            $targetDir          = "assets/images/sekolah/";
+            $targetDir          = "Assets/images/sekolah/";
             $nama_file_foto     = $_FILES['editLogoDinas']['name'];
             $file_foto          = $_FILES['editLogoDinas']['tmp_name'];
             $acak               = rand(1,99);
