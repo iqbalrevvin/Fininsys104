@@ -21,7 +21,7 @@ $(document).ready(function() {
 
      //Insert Kas KELUAR
        $(document).on('click', '#btnKasKeluar', function(){
-            $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
+            $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
             if($('#idJnsKas').val()==""){
                 swal("Sumber Kas Belum Di Isi !", "Mohon Pilih Dahulu Sumber Kas Keluar!", "warning");
                 $("#loading").hide();
@@ -59,7 +59,7 @@ $(document).ready(function() {
         });
        // Edit Kas Keluar
        $(document).on('click', '.btnEditKasKlr', function(){
-            $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
+            $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
             $id=$(this).val();
             if($('#idJnsKas'+$id).val()==""){
                 swal("Sumber Kas Belum Di Isi !", "Mohon Pilih Dahulu Sumber Kas Keluar!", "warning");
@@ -115,8 +115,8 @@ $(document).ready(function() {
         closeOnCancel: false
         },      function (isConfirm) {
                     if (isConfirm) {
-                        $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
-                        $("#deleteLoad").show().html("<img src='Assets/Images/load2.gif' width='40' height='40'>");
+                        $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
+                        $("#deleteLoad").show().html("<img src='Assets/images/load2.gif' width='40' height='40'>");
                         $.ajax({
                             type: "POST",
                             url: "Controller/Bendahara/Kas/KasKeluar/deleteKasKeluar.php",

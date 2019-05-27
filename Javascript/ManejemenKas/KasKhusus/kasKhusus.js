@@ -17,7 +17,7 @@ $(document).ready(function() {
      
        //Insert Master Kas Khusus
        $(document).on('click', '#btnAddMasterKasKhusus', function(){
-            $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
+            $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
             if($('#namaMasterKasKhusus').val()=="" || $('#thnMstrKas').val()==""){
                 value_null()
                 $("#loading").hide();
@@ -46,7 +46,7 @@ $(document).ready(function() {
 
        // Edit Jenis Kas Khusus
        $(document).on('click', '.btnEditMasterKasKhusus', function(){
-            $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
+            $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
             $id=$(this).val();
             if ($('#namaMasterKasKhusus'+$id).val()==""){
                 value_null()
@@ -92,8 +92,8 @@ $(document).ready(function() {
         closeOnCancel: false
         },      function (isConfirm) {
                     if (isConfirm) {
-                        $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
-                        $("#deleteLoad").show().html("<img src='Assets/Images/load2.gif' width='40' height='40'>");
+                        $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
+                        $("#deleteLoad").show().html("<img src='Assets/images/load2.gif' width='40' height='40'>");
                         $.ajax({
                             type: "POST",
                             url: "Controller/Bendahara/Kas/KasKhusus/deleteMasterKasKhusus.php",
@@ -132,8 +132,8 @@ $(document).ready(function() {
         closeOnCancel: false
         },      function (isConfirm) {
                     if (isConfirm) {
-                        $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
-                        $("#deleteLoad").show().html("<img src='Assets/Images/load2.gif' width='40' height='40'>");
+                        $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
+                        $("#deleteLoad").show().html("<img src='Assets/images/load2.gif' width='40' height='40'>");
                         $.ajax({
                             type: "POST",
                             url: "Controller/Bendahara/Kas/KasKhusus/Kelola/delKelolaKasQr.php",

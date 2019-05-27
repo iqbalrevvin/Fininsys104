@@ -15,8 +15,8 @@ $(document).ready(function() {
         closeOnCancel: false
         },      function (isConfirm) {
                     if (isConfirm) {
-                        $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
-                        $("#deleteLoad").show().html("<img src='Assets/Images/load2.gif' width='40' height='40'>");
+                        $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
+                        $("#deleteLoad").show().html("<img src='Assets/images/load2.gif' width='40' height='40'>");
                         $.ajax({
                             type: "POST",
                             url: "Controller/Bendahara/Kas/KasKhusus/Kelola/delKelolaKasQr.php",
@@ -41,7 +41,7 @@ $(document).ready(function() {
 
         // EDIT KAS KELOLA
        $(document).on('click', '.btnUpdateKasKelola', function(){
-            $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
+            $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
             $id=$(this).val();
             if ($('#jmlKelolaMasuk'+$id).val()=="" && $('#jmlKelolaKeluar'+$id).val()==""){
                 swal("Gagal !","Kas Masuk dan Kas Keluar Tidak Boleh Di Kosongkan, Isikan Dengan Angka 0!", "error");
