@@ -19,7 +19,7 @@
         <!--//-->
         <?php
             if (isset($_POST['submitEditFoto'])){ 
-            $targetDir          = "assets/images/pas-foto-siswa/";
+            $targetDir          = "Assets/images/pas-foto-siswa/";
             $nama_file_foto     = $_FILES['editFotoSiswa']['name'];
             $file_foto          = $_FILES['editFotoSiswa']['tmp_name'];
             $acak               = rand(1,99);

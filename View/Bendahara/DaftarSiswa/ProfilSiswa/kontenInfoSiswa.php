@@ -3,17 +3,17 @@
                 <?php if($profil['foto']==''){
                             if($profil['jenis_kelamin']=='L'){ ?>
                             <img style="width:250px; height:250px;" class="profile-user-img img-responsive img-circle" 
-                                src="assets/images/pas-foto-siswa/user-L.png" 
+                                src="Assets/images/pas-foto-siswa/user-L.png" 
                                 align="center" width="300" height="300" alt="User profile picture">
                             <?php }else{?>
                                 <img style="width:250px; height:250px;" class="profile-user-img img-responsive img-circle" 
-                                src="assets/images/pas-foto-siswa/user-P.png" 
+                                src="Assets/images/pas-foto-siswa/user-P.png" 
                                 align="center" width="300" height="300" alt="User profile picture">
                             <?php } ?>
 
                 <?php }else{ ?>
                 <img style="text-align: center" class="profile-user-img img-responsive img-thumbnail" 
-                     src="assets/images/pas-foto-siswa/<?php echo $profil['foto'] ?>" 
+                     src="Assets/images/pas-foto-siswa/<?php echo $profil['foto'] ?>" 
                       width="300" height="300" alt="User profile picture">
                 <?php } ?>
                 <h4 style="text-align: center" class="profile-username text-center"><?php echo $profil['nama_siswa'] ?></h4>
