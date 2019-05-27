@@ -105,7 +105,7 @@ $today = gmdate(date("Y-m-d"));
             {
                 logAct($idUsers, $level, $namaTmpln, $tglAct, $jamAct, $tglJamAct, $mac, 'Navigasi Ke Halaman Laporan Berdasarkan Master Pembayaran');
                 require_once "View/Other/Loading.php";
-                include "View/Bendahara/Laporan/LaporanPembayaran/ReportMaster/ReportMaster.php";
+                include "View/Bendahara/Laporan/LaporanPembayaran/ReportMaster/reportMaster.php";
             }
             elseif(@$_GET['p'] == 'ReportType')
             {
