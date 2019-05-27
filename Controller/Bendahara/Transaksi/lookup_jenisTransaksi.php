@@ -2,7 +2,7 @@
 
 <?php 
 @session_start();
-include "../../../Config/Configdb.php";
+include "../../../Config/ConfigDB.php";
 include "../../../Config/Functions.php";
 
 #if(isset($_POST['tunggakanSelect'])){
