@@ -38,7 +38,7 @@ require_once('Controller/Bendahara/DaftarSiswa/CetakDokumen/cetakRekapTunggakan.
             <td style="width: 100px; height: 97px;">
             <?php if($sekolah['logo_sekolah'] != ''){ ?>
                 <img style="text-align: center; margin-bottom: 25px; margin-left: auto; margin-right: auto;" class="" 
-                     src="assets/images/sekolah/<?php echo $sekolah['logo_sekolah'] ?>" width="85" height="85" alt="Logo Sekolah">
+                     src="Assets/images/sekolah/<?php echo $sekolah['logo_sekolah'] ?>" width="85" height="85" alt="Logo Sekolah">
             <?php }else{} ?>
             </td>
             <td style="width: 400px; text-align: center; height: 97px;">
@@ -62,7 +62,7 @@ require_once('Controller/Bendahara/DaftarSiswa/CetakDokumen/cetakRekapTunggakan.
             <td style="width: 100px; height: 97px;">
                 <?php if($sekolah['logo_dinas'] != ''){ ?>
                 <img style="text-align: center; margin-bottom: 25px; margin-left: 0px; margin-right: 0px;" 
-                    class="" src="assets/images/sekolah/<?php echo $sekolah['logo_dinas'] ?>" width="85" height="85" alt="Logo Dinas">
+                    class="" src="Assets/images/sekolah/<?php echo $sekolah['logo_dinas'] ?>" width="85" height="85" alt="Logo Dinas">
                 <?php }else{} ?>
             </td>
         </tr>
@@ -83,17 +83,17 @@ require_once('Controller/Bendahara/DaftarSiswa/CetakDokumen/cetakRekapTunggakan.
             if($profil['jenis_kelamin']=='L'){ ?>
                 <img style="text-align: right; margin-bottom: 10px; margin-left: 25px; margin-right: 0px;" 
                      class="profile-user-img img-responsive img-circle" 
-                     src="assets/images/pas-foto-siswa/user-L.png" 
+                     src="Assets/images/pas-foto-siswa/user-L.png" 
                      align="center" width="85" height="85" alt="User profile picture">
             <?php }else{?>
                 <img style=="text-align: right; margin-bottom: 10px; margin-left: 25px; margin-right: 0px;" 
                      class="profile-user-img img-responsive img-circle" 
-                     src="assets/images/pas-foto-siswa/user-P.png" 
+                     src="Assets/images/pas-foto-siswa/user-P.png" 
                      align="center" width="85" height="85" alt="User profile picture">
             <?php } ?>
             <?php }else{ ?>
                 <img style="text-align: right; margin-bottom: 10px; margin-left: 25px; margin-right: 0px;" class="profile-user-img img-responsive img-thumbnail" 
-                     src="assets/images/pas-foto-siswa/<?php echo $profil['foto'] ?>" 
+                     src="Assets/images/pas-foto-siswa/<?php echo $profil['foto'] ?>" 
                       width="85" height="85" alt="User profile picture">
                 <?php } ?>
         </td>
