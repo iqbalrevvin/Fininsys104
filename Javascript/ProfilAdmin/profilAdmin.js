@@ -1,8 +1,8 @@
 $(document).ready(function() {
     //Edit Data Admin
     $(document).on('click', '#bntEditAdmin', function() {
-        $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
-        $("#loading2").show().html("<img src='Assets/Images/load2.gif' width='40' height='40'>");
+        $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
+        $("#loading2").show().html("<img src='Assets/images/load2.gif' width='40' height='40'>");
         if ($('#editNamaAdmin').val() == "" || $('#editNipAdmin').val() == "" || $('#editNikAdmin').val() == "" ||
             $('#editJenisKelamin').val() == "") {
             value_null()
