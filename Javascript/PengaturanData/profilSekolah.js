@@ -1,8 +1,8 @@
 $(document).ready(function(){
         //Edit Data SEKOLAH
        $(document).on('click', '#btnEditSekolah', function(){
-            $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
-            $("#loading2").show().html("<img src='Assets/Images/load2.gif' width='40' height='40'>");
+            $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
+            $("#loading2").show().html("<img src='Assets/images/load2.gif' width='40' height='40'>");
             if ($('#editNamaSekolah').val()=="" || $('#editNamaYayasan').val()=="" || $('#editNPSN').val()=="" 
                 || $('#editAkreditasi').val()=="" || $('#editSKAkreditasi').val()=="" || $('#editJenjang').val()=="" ){
                 value_null()

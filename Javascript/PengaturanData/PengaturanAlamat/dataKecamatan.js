@@ -17,7 +17,7 @@ function dataKecamatan(){
     }
 //TAMBAH DATA DESA
        $(document).on('click', '#btnAddKecamatan', function(){
-            $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
+            $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
             if($('#namaKecamatan').val()==""){
                 value_null()
                 $("#loading").hide();
@@ -43,7 +43,7 @@ function dataKecamatan(){
         });
 // Edit Desa
        $(document).on('click', '.btnEditKecamatan', function(){
-            $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
+            $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
             $id=$(this).val();
             if ($('#namaKecamatan'+$id).val()==""){
                 value_null()
@@ -86,8 +86,8 @@ function dataKecamatan(){
         closeOnCancel: false
         },      function (isConfirm) {
                     if (isConfirm) {
-                        $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
-                        $("#deleteLoad").show().html("<img src='Assets/Images/load2.gif' width='40' height='40'>");
+                        $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
+                        $("#deleteLoad").show().html("<img src='Assets/images/load2.gif' width='40' height='40'>");
                         $.ajax({
                             type: "POST",
                             url: "Controller/Bendahara/PengaturanData/DataAlamat/DataKecamatan/deleteKecamatanQuery.php",

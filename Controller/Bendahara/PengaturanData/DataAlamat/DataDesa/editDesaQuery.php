@@ -1,6 +1,6 @@
 Config<?php
 	@session_start();
-	include "../../../../../Config/configdb.php";
+	include "../../../../../Config/ConfigDB.php";
 	include "../../../../../Config/Functions.php";
 	include "../../../../session.php";
 
