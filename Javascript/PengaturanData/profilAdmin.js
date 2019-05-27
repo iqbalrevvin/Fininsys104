@@ -1,8 +1,8 @@
 $(document).ready(function() {
     //Edit Data Admin
     $(document).on('click', '#bntEditAdmin', function() {
-        $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
-        $("#loading2").show().html("<img src='Assets/Images/load2.gif' width='40' height='40'>");
+        $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
+        $("#loading2").show().html("<img src='Assets/images/load2.gif' width='40' height='40'>");
         if ($('#editNamaAdmin').val() == "" || $('#editNipAdmin').val() == "" || $('#editNikAdmin').val() == "" ||
             $('#editJenisKelamin').val() == "") {
             value_null()
@@ -32,7 +32,7 @@ $(document).ready(function() {
             $editEmailAdmin = $('#editEmailAdmin').val();
             $.ajax({
                 type: "POST",
-                url: "COntroller/Bendahara/PengaturanData/ProfilAdmin/editBiodataAdmin.php",
+                url: "Controller/Bendahara/PengaturanData/ProfilAdmin/editBiodataAdmin.php",
                 data: {
                     idAdmin: $idAdmin,
                     editNamaAdmin: $editNamaAdmin,
@@ -74,8 +74,8 @@ $(document).ready(function() {
 
     //Edit Nama Tampilan            
     $(document).on('click', '#btnNamaTmplnAdmin', function() {
-        $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
-        $("#loading2").show().html("<img src='Assets/Images/load2.gif' width='40' height='40'>");
+        $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
+        $("#loading2").show().html("<img src='Assets/images/load2.gif' width='40' height='40'>");
         if ($('#editNamaTmplnAdmin').val() == "") {
             value_null()
             $("#loading").hide();
@@ -93,7 +93,7 @@ $(document).ready(function() {
 
             $.ajax({
                 type: "POST",
-                url: "COntroller/Bendahara/PengaturanData/ProfilAdmin/AkunAdmin/editAkunAdminQuery.php",
+                url: "Controller/Bendahara/PengaturanData/ProfilAdmin/AkunAdmin/editAkunAdminQuery.php",
                 data: {
                     idUser: $idUser,
                     editNamaTmplnAdmin: $editNamaTmplnAdmin,
@@ -111,8 +111,8 @@ $(document).ready(function() {
 
     //Edit Username           
     $(document).on('click', '#bntEditUsernameAdmin', function() {
-        $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
-        $("#loading2").show().html("<img src='Assets/Images/load2.gif' width='40' height='40'>");
+        $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
+        $("#loading2").show().html("<img src='Assets/images/load2.gif' width='40' height='40'>");
         if ($('#editUserNameAdmin').val() == "") {
             value_null()
             $("#loading").hide();
@@ -185,8 +185,8 @@ $(document).ready(function() {
 
     //Edit No. Identitas        
     $(document).on('click', '#bntEditIdntAdmin', function() {
-        $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
-        $("#loading2").show().html("<img src='Assets/Images/load2.gif' width='40' height='40'>");
+        $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
+        $("#loading2").show().html("<img src='Assets/images/load2.gif' width='40' height='40'>");
         if ($('#editIdntAdmin').val() == "") {
             value_null()
             $("#loading").hide();
@@ -198,7 +198,7 @@ $(document).ready(function() {
 
             $.ajax({
                 type: "POST",
-                url: "controller/Bendahara/PengaturanData/ProfilAdmin/AkunAdmin/editAkunAdminQuery.php",
+                url: "Controller/Bendahara/PengaturanData/ProfilAdmin/AkunAdmin/editAkunAdminQuery.php",
                 data: {
                     idUser: $idUser,
                     editIdntAdmin: $editIdntAdmin,
