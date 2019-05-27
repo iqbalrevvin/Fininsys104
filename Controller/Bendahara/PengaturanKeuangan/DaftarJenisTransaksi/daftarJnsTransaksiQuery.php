@@ -1,5 +1,5 @@
 <?php
-	include "../../../../Config/configdb.php";
+	include "../../../../Config/ConfigDB.php";
 	$sql = "SELECT * FROM jenis_transaksi JOIN master_transaksi 
 			ON jenis_transaksi.idMaster_transaksi = master_transaksi.idMaster_transaksi 
 			JOIN prodi ON master_transaksi.idJurusan = prodi.idJurusan
