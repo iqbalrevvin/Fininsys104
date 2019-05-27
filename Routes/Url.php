@@ -74,26 +74,26 @@ $today = gmdate(date("Y-m-d"));
             {
                 
                 require_once "View/Other/Loading.php";
-                include "View/Bendahara/Laporan/LaporanKas/KasMasuk/ReportCashIn.php";
+                include "View/Bendahara/Laporan/LaporanKas/KasMasuk/reportCashIn.php";
                 logAct($idUsers, $level, $namaTmpln, $tglAct, $jamAct, $tglJamAct, $mac, 'Navigasi Ke Halaman Laporan Kas Masuk');
             }
             elseif(@$_GET['p'] == 'ReportCashOut')
             {
                 logAct($idUsers, $level, $namaTmpln, $tglAct, $jamAct, $tglJamAct, $mac, 'Navigasi Ke Halaman Laporan Kas Keluar');
                 require_once "View/Other/Loading.php";
-                include "View/Bendahara/Laporan/LaporanKas/KasKeluar/ReportCashOut.php";
+                include "View/Bendahara/Laporan/LaporanKas/KasKeluar/reportCashOut.php";
             }
             elseif(@$_GET['p'] == 'ReportRecaps')
             {
                 logAct($idUsers, $level, $namaTmpln, $tglAct, $jamAct, $tglJamAct, $mac, 'Navigasi Ke Halaman Laporan Rekapitulasi Kas');
                 require_once "View/Other/Loading.php";
-                include "View/Bendahara/Laporan/LaporanKas/KasRekap/ReportRecaps.php";
+                include "View/Bendahara/Laporan/LaporanKas/KasRekap/reportRecaps.php";
             }
             elseif(@$_GET['p'] == 'ReportSpecialCash')
             {
                 logAct($idUsers, $level, $namaTmpln, $tglAct, $jamAct, $tglJamAct, $mac, 'Navigasi Ke Halaman Laporan Kas Khusus');
                 require_once "View/Other/Loading.php";
-                include "View/Bendahara/Laporan/LaporanKas/KasKhusus/ReportSpecialCash.php";
+                include "View/Bendahara/Laporan/LaporanKas/KasKhusus/reportSpecialCash.php";
             }
             elseif(@$_GET['p'] == 'ReportKeyword')
             {
