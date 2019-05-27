@@ -11,7 +11,7 @@ require('MySQLDump.php');
 
 $time = -microtime(true);
 
-$dump = new MySQLDump(new mysqli('localhost', 'root', '', 'smkikaka_fininsys104'));
+$dump = new MySQLDump(new mysqli('localhost', 'smkikaka', 'Iqz220195', 'smkikaka_fininsys104'));
 $dump->save('../../../DatabaseBackup/Fininsys-Database-Backup_' . date('d-m-Y') . '.sql.gz');
 
 $time += microtime(true);
