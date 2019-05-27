@@ -90,7 +90,7 @@
                                     </div>
                                 </td>
                             </tr>
-                            <?php include "modal_editTransaksi.php"; ?>
+                            <?php include "modal_EditTransaksi.php"; ?>
                             <?php } ?>
                         </tbody>
                     </table>
