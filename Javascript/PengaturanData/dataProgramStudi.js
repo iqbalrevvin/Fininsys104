@@ -19,8 +19,8 @@
 // Menampilkan Tabel Daftar Program Studi-----------------------------
   //Insert Program Studi
        $(document).on('click', '#btnAddPS', function(){
-            $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
-            $("#loading2").show().html("<img src='Assets/Images/load2.gif' width='40' height='40'>");
+            $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
+            $("#loading2").show().html("<img src='Assets/images/load2.gif' width='40' height='40'>");
             if($('#namaPS').val()=="" || $('#singkatanPS').val()=="" || $('#jmlSemester').val()==""){
                 value_null()
                 $("#loading").hide();
@@ -52,8 +52,8 @@
         });
  // Edit Program Studi
        $(document).on('click', '.btnEditPS', function(){
-            $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
-            $("#loading2").show().html("<img src='Assets/Images/load2.gif' width='40' height='40'>");
+            $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
+            $("#loading2").show().html("<img src='Assets/images/load2.gif' width='40' height='40'>");
             $id=$(this).val();
             if ($('#namaPS'+$id).val()=="" || $('#singkatanPS'+$id).val()=="" || $('#jmlSemester'+$id).val()==""){
                 value_null()

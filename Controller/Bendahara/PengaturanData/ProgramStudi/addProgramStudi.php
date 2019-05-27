@@ -1,6 +1,6 @@
 <?php
 	@session_start();
-	include "../../../../Config/configdb.php";
+	include "../../../../Config/ConfigDB.php";
 
 	if(isset($_POST['addProgramStudi'])){
 		$namaPS 		= $_POST['namaPS'];
