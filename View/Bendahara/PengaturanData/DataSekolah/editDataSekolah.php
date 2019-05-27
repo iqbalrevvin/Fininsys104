@@ -96,7 +96,7 @@
                         <?= $sekolah['provinsi_sekolah'] ?>
                     </option>
                     <?php
-                    include "COntroller/Other/pilihAlamatProvinsi.php"; 
+                    include "Controller/Other/pilihAlamatProvinsi.php"; 
                     while($prov = $dataProvinsi->fetch_object()): 
                     ?>
                     <option value="<?= $prov->nama_provinsi ?>"><?= $prov->nama_provinsi ?></option>
