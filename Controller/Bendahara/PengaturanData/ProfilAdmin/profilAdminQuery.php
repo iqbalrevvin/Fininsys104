@@ -1,7 +1,7 @@
 <?php
 error_reporting(0);
 @session_start();
-include "Config/configdb.php";
+include "Config/ConfigDB.php";
 
 if(@$_GET['ID'] == $_SESSION['Administrator'] || @$_GET['ID'] == $_SESSION['Bendahara'] || @$_GET['ID'] == $_SESSION['KepalaSekolah']){
 
