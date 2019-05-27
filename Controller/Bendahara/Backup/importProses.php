@@ -1,7 +1,7 @@
 <?php
 if(isset($_POST['prosesImport'])){ 
 	@session_start();
-	include "../../../Config/configdb.php";
+	include "../../../Config/ConfigDB.php";
 	include "../../../Config/Functions.php";
 	error_reporting(0);
 	date_default_timezone_set('Asia/Jakarta');
@@ -26,7 +26,7 @@ if(isset($_POST['prosesImport'])){
 
 	$time = -microtime(true);
 
-	$import = new MySQLImport(new mysqli('localhost', 'root', '', 'fininsys_prima-insani'));
+	$import = new MySQLImport(new mysqli('localhost', 'root', '', 'fininsys_smkikakartika'));
 
 	$import->onProgress = function ($count, $percent) {
 		if ($percent !== null) {

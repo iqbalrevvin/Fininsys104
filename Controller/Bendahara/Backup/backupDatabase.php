@@ -1,6 +1,6 @@
 <?php
 @session_start();
-include "../../../Config/configdb.php";
+include "../../../Config/ConfigDB.php";
 include "../../../Config/Functions.php";
 date_default_timezone_set('Asia/Jakarta');
 set_time_limit(0);

@@ -4,7 +4,7 @@
         <div class="four-zero-four">
             <div class="four-zero-four-container" >
                 <div class="error-code">
-                    <img src="assets/images/backup.gif" alt="Fininsys | M. Iqbal Development" style="width:600px;height:250px;">
+                    <img src="Assets/images/backup.gif" alt="Fininsys | M. Iqbal Development" style="width:600px;height:250px;">
                 </div>
                 <br>
                 <br>

@@ -1,8 +1,8 @@
 <?php 
 	@session_start();
-	include "../../../Config/configdb.php";
+	include "../../../Config/ConfigDB.php";
 	include "../../../Config/Functions.php";
-	include "../../session.php";
+	include "../../Session.php";
 	if(isset($_POST['backup'])){
 		#$nama_file = "fininsys_".date('d-m-Y').'.sql';
 		$backup = backupDatabaseTables($dbhost,$dbuser,$dbpass,$dbname);
