@@ -12,7 +12,7 @@
                             <div class="media">
                                 <div class="media-left">
                                     <a href="javascript:void(0);">
-                                        <img class="media-object" src="Assets/Images/Admin/iqbal.jpeg" width="84" height="94">
+                                        <img class="media-object" src="Assets/images/Admin/iqbal.jpeg" width="84" height="94">
                                     </a>
                                 </div>
                                 <div class="media-body">
@@ -22,11 +22,11 @@
                                     - iqbal.revvin@gmail.com<br>
                                     | 
                                     <a class="col-teal" href="https://instragram.com/iqbalrevvin">
-                                     <img src="Assets/Images/icon/instagram.png" width="15" height="15"> @iqbalrevvin
+                                     <img src="Assets/images/icon/instagram.png" width="15" height="15"> @iqbalrevvin
                                     </a>
                                     | 
                                     <a class="col-teal" href="https://facebook.com/iqbal.revvin">
-                                      <img src="Assets/Images/icon/facebook.png" width="15" height="15"> @iqbal.revvin
+                                      <img src="Assets/images/icon/facebook.png" width="15" height="15"> @iqbal.revvin
                                     </a>
                                 </div>
                             </div>
