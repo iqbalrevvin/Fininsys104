@@ -203,7 +203,7 @@
                                                 class="form-control show-tick" data-live-search="true" required>
                                                 <option value="">--Kota/Kabupaten--</option>
                                                 <?php
-                                                    include "COntroller/Other/pilihAlamatKota.php"; 
+                                                    include "Controller/Other/pilihAlamatKota.php"; 
                                                     while($kota = $dataKota->fetch_object()): 
                                                 ?>
                                                     <option value="<?= $kota->nama_kota ?>"><?= $kota->nama_kota ?></option>
@@ -222,7 +222,7 @@
                                                 class="form-control show-tick" data-live-search="true" required>
                                                 <option value="">--Provinsi--</option>
                                                 <?php
-                                                    include "COntroller/Other/pilihAlamatProvinsi.php"; 
+                                                    include "Controller/Other/pilihAlamatProvinsi.php"; 
                                                     while($prov = $dataProvinsi->fetch_object()): 
                                                 ?>
                                                     <option value="<?= $prov->nama_provinsi ?>"><?= $prov->nama_provinsi ?></option>

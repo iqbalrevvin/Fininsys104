@@ -22,8 +22,8 @@
                     }
                 } );
                 $('#BtnDelSiswa').on("click", function(){ // triggering delete one by one
-                    $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
-                    $("#deleteLoad").show().html("<img src='Assets/Images/load2.gif' width='40' height='40'>");
+                    $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
+                    $("#deleteLoad").show().html("<img src='Assets/images/load2.gif' width='40' height='40'>");
                     $pass1=$('#pass1').val();
                     $pass2=$('#pass2').val();
                     //////////////////////////////////////////////////////////////////////////////
@@ -34,8 +34,8 @@
                         $("#deleteLoad").hide();
                     }
                     else if( $('.delCheckRowSiswa:checked').length > 0 ){  // at-least one checkbox checked
-                        $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
-                        $("#deleteLoad").show().html("<img src='Assets/Images/load2.gif' width='40' height='40'>");
+                        $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
+                        $("#deleteLoad").show().html("<img src='Assets/images/load2.gif' width='40' height='40'>");
                         var ids = [];
                         $('.delCheckRowSiswa').each(function(){
                             if($(this).is(':checked')) { 
@@ -78,8 +78,8 @@
 
      //Insert Siswa Baru
        $(document).on('click', '#bntAddSiswa', function(){
-            $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
-            $("#loading2").show().html("<img src='Assets/Images/load2.gif' width='40' height='40'>");
+            $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
+            $("#loading2").show().html("<img src='Assets/images/load2.gif' width='40' height='40'>");
             if ($('#namaSiswa').val()=="" || $('#nisnSiswa').val()=="" || $('#nikSiswa').val()=="" 
                 || $('#nipdSiswa').val()=="" || $('#tglMasukSiswa').val()==""  || $('#jenisKelamin').val()=="" 
                 || $('#prodiSiswa').val()==""){
@@ -175,8 +175,8 @@
         closeOnCancel: false
         },      function (isConfirm) {
                     if (isConfirm) {
-                        $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
-                        $("#deleteLoad").show().html("<img src='Assets/Images/load2.gif' width='40' height='40'>");
+                        $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
+                        $("#deleteLoad").show().html("<img src='Assets/images/load2.gif' width='40' height='40'>");
                         $.ajax({
                             type: "POST",
                             url: "Controller/Bendahara/DaftarSiswa/deleteSiswaQuery.php",
@@ -210,8 +210,8 @@
 
        //Edit Data Siswa
        $(document).on('click', '#bntEditSiswa', function(){
-            $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
-            $("#loading2").show().html("<img src='Assets/Images/load2.gif' width='40' height='40'>");
+            $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
+            $("#loading2").show().html("<img src='Assets/images/load2.gif' width='40' height='40'>");
             if ($('#editNamaSiswa').val()=="" || $('#editNisnSiswa').val()=="" || $('#editNikSiswa').val()=="" 
                 || $('#editNipdSiswa').val()=="" || $('#editTglMasukSiswa').val()==""  || $('#editJenisKelamin').val()=="" 
                 || $('#editProdiSiswa').val()==""  ){
@@ -310,7 +310,7 @@
 //TAMBAH TRANSAKSI KHUSUS SISWA
 $(document).on('click', '#bntAddJnsTransaksiKhusus', function(){
     $id=$(this).val();
-    $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
+    $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
     if ($('#idJenisTrans').val()=="" || $('#thnPembayaran').val()==""){
         value_null()
         $("#loading").hide();
@@ -361,8 +361,8 @@ $(document).on('click', '#bntAddJnsTransaksiKhusus', function(){
         closeOnCancel: false
         },      function (isConfirm) {
                     if (isConfirm) {
-                        $("#loading").show().html("<img src='Assets/Images/load.gif' width='250' height='50' >");
-                        $("#deleteLoad").show().html("<img src='Assets/Images/load2.gif' width='40' height='40'>");
+                        $("#loading").show().html("<img src='Assets/images/load.gif' width='250' height='50' >");
+                        $("#deleteLoad").show().html("<img src='Assets/images/load2.gif' width='40' height='40'>");
                         $.ajax({
                             type: "POST",
                             url: "Controller/Bendahara/DaftarSiswa/ProfilSiswa/deleteJenisPembayaranKhususQr.php",
